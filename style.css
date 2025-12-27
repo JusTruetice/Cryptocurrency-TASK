@@ -1,0 +1,170 @@
+/* Phase 5: Visual Evidence & General Styles */
+
+/* იმპორტი 'Inter' შრიფტისთვის (თუ Google Fonts-ს იყენებ) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  background-color: #0b0e11; /* Binance Dark Background */
+  color: #eaecef;
+  font-family: 'Inter', sans-serif; /* მოთხოვნა Phase 5 */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* კონტეინერი შიგთავსის ცენტრირებისთვის */
+main, header, footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Phase 2: Header & Navigation */
+header {
+  border-bottom: 1px solid #2b2f36;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+nav a {
+  color: #848e9c;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #0ecb81; /* მწვანე აქცენტი ჰოვერზე */
+}
+
+/* Phase 3 & 5: The Asset Ledger (Table Styling) */
+table {
+  width: 100%;
+  border-collapse: collapse; /* მოთხოვნა Phase 5 */
+  margin-top: 20px;
+  background-color: #161a1e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #1e2329;
+  color: #848e9c;
+  text-align: left;
+  padding: 15px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid #2b2f36; /* მოთხოვნა Phase 5 */
+}
+
+/* Interactivity: Hover state for rows */
+tr:hover {
+  background-color: #1e2329; /* მოთხოვნა Phase 5 */
+}
+
+/* Data Formatting Tags */
+strong {
+  color: #ffffff;
+}
+
+em {
+  color: #848e9c;
+  font-style: normal;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+mark {
+  background-color: #f0b90b;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* Percentage Colors */
+.positive {
+  color: #0ecb81; /* Binance Green */
+}
+
+.negative {
+  color: #f6465d; /* Binance Red */
+}
+
+/* Phase 2: Aside (News Ticker) */
+aside {
+  background-color: #1e2329;
+  border-left: 4px solid #f0b90b;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+aside p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Phase 4: Lists & Stats Section */
+#stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  background-color: #161a1e;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+ul, ol, dl {
+  padding-left: 20px;
+  color: #b7bdc6;
+}
+
+dt {
+  font-weight: bold;
+  color: #f0b90b;
+  margin-top: 10px;
+}
+
+dd {
+  margin-left: 0;
+  font-size: 13px;
+}
+
+/* Phase 5: Iframe & Footer */
+#evidence iframe {
+  border: 2px solid #2b2f36;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid #2b2f36;
+  margin-top: 50px;
+  color: #848e9c;
+  font-size: 14px;
+}
+
+footer a {
+  color: #0ecb81;
+  text-decoration: none;
+}
+
+/* Coin Icons Styling */
+table img {
+  vertical-align: middle;
+  margin-right: 10px;
+  border-radius: 50%;
+}
