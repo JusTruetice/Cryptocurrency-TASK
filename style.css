@@ -1,52 +1,59 @@
-/* Phase 5: Visual Evidence & General Styles */
 
-/* იმპორტი 'Inter' შრიფტისთვის (თუ Google Fonts-ს იყენებ) */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 body {
-  background-color: #0b0e11; /* Binance Dark Background */
+  background-color: #0b0e11; /* Binance Dark */
   color: #eaecef;
-  font-family: 'Inter', sans-serif; /* მოთხოვნა Phase 5 */
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
 
-/* კონტეინერი შიგთავსის ცენტრირებისთვის */
-main, header, footer {
+/* Layout container */
+header,
+main,
+footer {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Phase 2: Header & Navigation */
+
 header {
-  border-bottom: 1px solid #2b2f36;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #2b2f36;
 }
 
 h1 {
   font-size: 24px;
   color: #ffffff;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
   color: #848e9c;
   text-decoration: none;
   margin-left: 20px;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #0ecb81; /* მწვანე აქცენტი ჰოვერზე */
+  color: #0ecb81;
 }
 
-/* Phase 3 & 5: The Asset Ledger (Table Styling) */
+
+
 table {
   width: 100%;
-  border-collapse: collapse; /* მოთხოვნა Phase 5 */
+  border-collapse: collapse;
   margin-top: 20px;
   background-color: #161a1e;
   border-radius: 8px;
@@ -64,15 +71,14 @@ th {
 
 td {
   padding: 15px;
-  border-bottom: 1px solid #2b2f36; /* მოთხოვნა Phase 5 */
+  border-bottom: 1px solid #2b2f36;
 }
 
-/* Interactivity: Hover state for rows */
 tr:hover {
-  background-color: #1e2329; /* მოთხოვნა Phase 5 */
+  background-color: #1e2329;
 }
 
-/* Data Formatting Tags */
+/* Inline data formatting */
 strong {
   color: #ffffff;
 }
@@ -89,19 +95,27 @@ mark {
   color: #000;
   padding: 2px 6px;
   border-radius: 4px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-/* Percentage Colors */
+/* Price indicators */
 .positive {
-  color: #0ecb81; /* Binance Green */
+  color: #0ecb81;
 }
 
 .negative {
-  color: #f6465d; /* Binance Red */
+  color: #f6465d;
 }
 
-/* Phase 2: Aside (News Ticker) */
+/* Coin icons */
+table img {
+  vertical-align: middle;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+
+
 aside {
   background-color: #1e2329;
   border-left: 4px solid #f0b90b;
@@ -115,10 +129,10 @@ aside p {
   font-size: 14px;
 }
 
-/* Phase 4: Lists & Stats Section */
+
 #stats {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   background-color: #161a1e;
   padding: 20px;
@@ -126,13 +140,36 @@ aside p {
   margin-top: 30px;
 }
 
-ul, ol, dl {
+/* Section title full width */
+#stats > h2 {
+  grid-column: 1 / -1;
+  margin: 0 0 10px 0;
+}
+
+/* Cards */
+.stats-card {
+  background-color: #1e2329;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.stats-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/* Lists */
+ul,
+ol,
+dl {
   padding-left: 20px;
+  margin: 0;
   color: #b7bdc6;
 }
 
 dt {
-  font-weight: bold;
+  font-weight: 600;
   color: #f0b90b;
   margin-top: 10px;
 }
@@ -142,8 +179,9 @@ dd {
   font-size: 13px;
 }
 
-/* Phase 5: Iframe & Footer */
+
 #evidence iframe {
+  width: 100%;
   border: 2px solid #2b2f36;
   border-radius: 12px;
   margin-top: 20px;
@@ -160,11 +198,4 @@ footer {
 footer a {
   color: #0ecb81;
   text-decoration: none;
-}
-
-/* Coin Icons Styling */
-table img {
-  vertical-align: middle;
-  margin-right: 10px;
-  border-radius: 50%;
 }
